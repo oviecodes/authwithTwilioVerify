@@ -18,15 +18,19 @@ const resendCode = async(req, res) => {
 const verifyUser = async(req, res) => {
     //check verification code from user input
     const verifyStatus = await checkVerification(req, res, req.user.phonenumber, req.body.verifyCode)
-    console.log(verifyStatus)
+    
     if(verifyStatus === 'approved') {
         req.session.verified = true
         res.redirect('/users/dashboard')
     } else {
         req.session.verified = false
-        res.redirect('/users/login')
+        req.flash(
+            'error_msg',
+            'wrong verification code'
+        )
+        res.redirect('/users/verify')
     }
-    console.log(req.session)
+    
 }
 
 module.exports = {

@@ -12,19 +12,15 @@ const localAuth = (passport) => {
         { usernameField: 'email' }, async(email, password, done) => {
             try {
                 const user = await User.findOne({ email: email }) 
-                console.log(user)
                 
                 if (!user) {
-                    console.log('incorrect email')
                     return done(null, false, { message: 'Incorrect email' });
                 }
                 //validate password
                 const valid = await user.validPassword(password)
                 if (!valid) {
-                    console.log('incorrect password')
                     return done(null, false, { message: 'Incorrect password.' });
                 }
-                console.log('logged in')
                 return done(null, user);
 
             } catch (error) {

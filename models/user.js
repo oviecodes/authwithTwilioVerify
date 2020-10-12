@@ -23,7 +23,8 @@ const userSchema = new mongoose.Schema({
     email : {
         type: String,
         required: true
-    }
+    },
+    verified: Boolean
 })
 
 //hash password on save

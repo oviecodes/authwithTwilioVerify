@@ -33,7 +33,7 @@ app.set('view engine', 'ejs');
 app.use('/static', express.static(path.join(__dirname, 'public')))
 app.use(session({ 
     secret: "please log me in",
-    resave: false,
+    resave: true,
     saveUninitialized: true }
 ));
 
@@ -62,13 +62,12 @@ app.get('/', (req, res) => {
     res.status(200).send('welcome home')
 })
 
-app.get('/verify', (req, res) => {
-    res.status(200).send('please verify your account')
-})
-
-
 //define error handler
-
+app.use(function(err, req, res, next) {
+    res.render('error', {
+        error : err
+    })
+})
 
 
 //listen on port

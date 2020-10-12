@@ -1,38 +1,38 @@
 
 
 <div class="ui very padded text container segment">
-    
-    <h3>
-        Signup Form
-    </h3>
-    
-    <form class="ui form" action="/users/signup" method="POST">
+  <%- include ('./partials/message') %>
+  <h3>
+      Signup Form
+  </h3>
+  
+  <form class="ui form" action="/users/signup" method="POST">
 
-        <div class="field">
-          <label>Name</label>
-          <input type="text" name="name" placeholder="name">
-        </div>
-        <div class="field">
-          <label>Username</label>
-          <input type="text" name="username" placeholder="username">
-        </div>
-        <div class="field">
-          <label>Password</label>
-          <input type="password" name="password" placeholder="Password">
-        </div>
-        <div class="field">
-          <label>Phone number</label>
-          <input type="tel" id='phone'>
-          <span id="valid-msg" class="hide success">✓ Valid</span>
-          <span id="error-msg" class="hide error"></span>
-        </div>
-        <div class="field">
-          <label>Email</label>
-          <input type="email" name="email" placeholder="Email address">
-        </div>
-        
-        <button class="ui button" type="submit">Sign up</button>
-      </form>
+    <div class="field">
+      <label>Name</label>
+      <input type="text" name="name" placeholder="name">
+    </div>
+    <div class="field">
+      <label>Username</label>
+      <input type="text" name="username" placeholder="username">
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Password">
+    </div>
+    <div class="field">
+      <label>Phone number</label>
+      <input type="tel" id='phone'>
+      <span id="valid-msg" class="hide success">✓ Valid</span>
+      <span id="error-msg" class="hide error"></span>
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input type="email" name="email" placeholder="Email address">
+    </div>
+    
+    <button class="ui button" type="submit">Sign up</button>
+  </form>
 </div>
 
 <script src="/static/js/intlTelInput.js"></script>

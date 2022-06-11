@@ -10,4 +10,4 @@ The application requires MongoDb to be installed on the user machine, also a .en
 - TWILIO_AUTH_TOKEN = <YOUR_AUTH_TOKEN>
 - TWILIO_PHONE_NUMBER = <TOUR_TWILIO_NUMBER>
 
-To start the application: npm run dev
+npm run dev - to start the server

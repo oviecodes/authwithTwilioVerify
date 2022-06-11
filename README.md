@@ -1,5 +1,5 @@
 # Auth with Twilio Verify
-A simple authentication app that uses Twilio verify API to verify users
+A simple authentication app that uses Twilio verify API to Authenticate users
 
 npm install - to install all packages necessary for the app to run
 npm install nodemon -g

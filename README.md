@@ -1,8 +1,8 @@
 # Auth with Twilio Verify
 A simple authentication app that uses Twilio verify API to Authenticate users
 
--npm install - to install all packages necessary for the app to run
--npm install nodemon -g
+- npm install - to install all packages necessary for the app to run
+- npm install nodemon -g
 
 1. The application requires MongoDb to be installed on the user machine, 
 2. Also a .env file is needed which contains the following 
